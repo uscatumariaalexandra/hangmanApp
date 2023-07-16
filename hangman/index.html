@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    <title>Hangman Game</title>
+    <link href="https://fonts.cdnfonts.com/css/bloody" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/thegoodmonolith"
+      rel="stylesheet"
+    />
+    <link href="https://fonts.cdnfonts.com/css/break-love" rel="stylesheet" />
+    <link
+      href="https://fonts.cdnfonts.com/css/lt-binary-neue"
+      rel="stylesheet"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+      crossorigin="anonymous"
+    />
+    <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <div class="container">
+      <div id="header">
+        <div class="col-sm-8 title">
+          <h3 class="h3 display-6">Hangman Game</h3>
+        </div>
+        <div class="col-sm-2">
+          <button id="start-button" class="btn btn-outline-dark btn-sm">
+            START GAME
+          </button>
+        </div>
+        <div id="card" class="timer col-sm-2">
+          <span id="countdown" class="watch"></span>
+        </div>
+      </div>
+      <p id="word" class="col-xs-12 col-sm-12 cal-ml-12 cal-xl-12"></p>
+      <p
+        id="chances-remained"
+        class="chances-text col-xs-12 col-sm-12 cal-ml-12 cal-xl-12"
+      >
+        ☠️ CHANCES REMAINED:<span
+          id="number-chances-remained"
+          class="number-chances"
+          >3</span
+        >
+      </p>
+      <div id="keybord">
+        <div class="row row1 container">
+          <button class="button col-sm">Q</button>
+          <button class="button col-sm">W</button>
+          <button class="button col-sm">E</button>
+          <button class="button col-sm">R</button>
+          <button class="button col-sm">T</button>
+          <button class="button col-sm">Y</button>
+          <button class="button col-sm">U</button>
+          <button class="button col-sm">I</button>
+          <button class="button col-sm">O</button>
+          <button class="button col-sm">P</button>
+        </div>
+        <div class="row row2 container">
+          <button class="button col-sm">A</button>
+          <button class="button col-sm">S</button>
+          <button class="button col-sm">D</button>
+          <button class="button col-sm">F</button>
+          <button class="button col-sm">G</button>
+          <button class="button col-sm">H</button>
+          <button class="button col-sm">J</button>
+          <button class="button col-sm">K</button>
+          <button class="button col-sm">L</button>
+        </div>
+        <div class="row row3 container">
+          <button class="button col-sm">Z</button>
+          <button class="button col-sm">X</button>
+          <button class="button col-sm">C</button>
+          <button class="button col-sm">V</button>
+          <button class="button col-sm">B</button>
+          <button class="button col-sm">N</button>
+          <button class="button col-sm">M</button>
+        </div>
+      </div>
+
+      <script src="script.js"></script>
+    </div>
+  </body>
+</html>

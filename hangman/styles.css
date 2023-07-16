@@ -1,0 +1,166 @@
+body {
+  background: url("https://images.unsplash.com/photo-1585314062604-1a357de8b000?ixlib=rb-4.0.3&q=85&fm=jpg&crop=entropy&cs=srgb");
+  background-size: cover;
+  box-sizing: border-box;
+  overflow: hidden;
+}
+#header {
+  display: flex;
+  padding: 10px;
+}
+
+#keybord {
+  display: flex;
+  padding: 20px;
+  flex-direction: column;
+  align-items: center;
+  visibility: hidden;
+}
+
+#keybord sm .row {
+  margin: 1%;
+}
+
+.button {
+  font-family: "TheGoodMonolith", sans-serif;
+  padding: 10px;
+  text-align: center;
+  margin: 15px;
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+  box-shadow: -2px -2px 4px rgb(255, 255, 255), 2px 2px 4px rgb(1, 0, 0);
+  border-radius: 25px;
+  cursor: pointer;
+}
+
+@keyframes wiggle {
+  0%,
+  7% {
+    transform: rotateZ(0);
+  }
+  15% {
+    transform: rotateZ(-15deg);
+  }
+  20% {
+    transform: rotateZ(10deg);
+  }
+  25% {
+    transform: rotateZ(-10deg);
+  }
+  30% {
+    transform: rotateZ(6deg);
+  }
+  35% {
+    transform: rotateZ(-4deg);
+  }
+  40%,
+  100% {
+    transform: rotateZ(0);
+  }
+}
+#start-button {
+  background-color: transparent;
+  color: rgb(255, 255, 14);
+  height: 90px;
+  font-size: 80%;
+  cursor: pointer;
+  border-radius: 5%;
+  border-color: rgb(255, 255, 255);
+  font-family: "TheGoodMonolith", sans-serif;
+  letter-spacing: 3px;
+  font-weight: bolder;
+}
+
+#start-button:hover {
+  animation: wiggle 2s linear infinite;
+}
+
+.title {
+  flex-grow: 4;
+  padding: 20px;
+  text-align: center;
+  order: 2;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+  letter-spacing: 15px;
+}
+
+.h3 {
+  font-family: "Bloody", sans-serif;
+  color: rgb(255, 255, 255);
+}
+#word {
+  color: rgb(255, 255, 255);
+  font-size: 150%;
+  margin-top: 30px;
+  text-align: center;
+  visibility: hidden;
+  letter-spacing: 15px;
+}
+
+.chances-text {
+  color: rgb(255, 255, 255);
+  padding-top: 40px;
+  font-size: 150%;
+  letter-spacing: 15px;
+  font-family: "TheGoodMonolith", sans-serif;
+  font-weight: bolder;
+  text-align: center;
+  visibility: hidden;
+}
+
+.number-chances {
+  color: rgb(255, 33, 33);
+  font-size: 30px;
+}
+
+#card {
+  order: 3;
+  font-family: fantasy;
+  text-align: right;
+  visibility: hidden;
+}
+
+#countdown {
+  font-family: "TheGoodMonolith", sans-serif;
+  font-size: 200%;
+  color: rgb(255, 255, 255);
+  background-color: transparent;
+}
+#header col-sm {
+  font-size: 10px;
+}
+
+.alert-success {
+  color: red;
+  visibility: visible;
+}
+@media screen and (max-width: 767px) {
+  .chances-text {
+    font-size: 20px;
+    letter-spacing: 0;
+  }
+  .number-chances {
+    font-size: 20px;
+  }
+}
+
+@media only screen and (max-width: 993px) and (min-width: 150px) {
+  #word {
+    font-size: 50%;
+  }
+
+  #keybord .row .button {
+    width: 5%;
+    flex-wrap: wrap;
+    margin: 1px;
+  }
+}
+@media only screen and (max-width: 470px) and (min-width: 150px) {
+  .h3 {
+    display: none;
+  }
+
+  #card {
+    order: 2;
+  }
+}
